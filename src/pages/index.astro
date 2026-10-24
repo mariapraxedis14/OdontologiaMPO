@@ -1,4 +1,6 @@
 ---
+import inicio from "../data/inicio.json";
+
 const whatsapp =
   "https://wa.me/573153983469?text=" +
   encodeURIComponent(
@@ -36,12 +38,10 @@ const whatsapp =
         <div class="contenido">
           <p class="etiqueta">SOCORRO · SANTANDER · COLOMBIA</p>
 
-          <h1>Una sonrisa que refleje tu esencia.</h1>
+          <h1>{inicio.titulo}</h1>
 
-          <p class="introduccion">
-            Odontología estética y rehabilitación.
-            Solicita una valoración con María Praxedis.
-          </p>
+          <p class="introduccion">{inicio.descripcion}</p>
+
 
           <a class="boton" href={whatsapp}>
             Solicitar valoración
