@@ -1,0 +1,16 @@
+content:
+  - name: inicio
+    label: Página de inicio
+    type: file
+    path: src/data/inicio.json
+    format: json
+    fields:
+      - name: titulo
+        label: Título principal
+        type: string
+        required: true
+
+      - name: descripcion
+        label: Descripción de la portada
+        type: text
+        required: true
