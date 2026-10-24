@@ -49,11 +49,14 @@ const whatsapp =
           </a>
         </div>
 
-        <div class="monograma" aria-hidden="true">
-          <span>MP</span>
-          <div class="linea"></div>
-          <p>MARÍA PRAXEDIS</p>
-        </div>
+        <div class="panel-logo">
+  <img
+    class="logo-portada"
+    src="/imagenes/logo-maria-praxedis.jpg"
+    alt="María Praxedis — Odontología estética y rehabilitación"
+  />
+</div>
+
       </section>
 
       <section id="enfoque" class="seccion enfoque">
@@ -318,4 +321,31 @@ const whatsapp =
       scroll-behavior: auto;
     }
   }
+
+.panel-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 40px;
+  background: #ffffff;
+}
+
+.logo-portada {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .panel-logo {
+    padding: 24px;
+  }
+
+  .logo-portada {
+    max-width: 380px;
+  }
+}
+
 </style>
