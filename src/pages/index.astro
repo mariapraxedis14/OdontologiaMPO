@@ -1,0 +1,321 @@
+---
+const whatsapp =
+  "https://wa.me/573153983469?text=" +
+  encodeURIComponent(
+    "Hola, quisiera solicitar una cita de valoración con María Praxedis. ¿Podrían indicarme la disponibilidad?"
+  );
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="María Praxedis. Odontología estética y rehabilitación en Socorro, Santander, Colombia. Solicita una valoración."
+    />
+    <title>María Praxedis | Odontología en Socorro</title>
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <a class="marca" href="#inicio">
+        María Praxedis
+        <span>Odontología estética y rehabilitación</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a href="#enfoque">Nuestro enfoque</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="portada">
+        <div class="contenido">
+          <p class="etiqueta">SOCORRO · SANTANDER · COLOMBIA</p>
+
+          <h1>Una sonrisa que refleje tu esencia.</h1>
+
+          <p class="introduccion">
+            Odontología estética y rehabilitación.
+            Solicita una valoración con María Praxedis.
+          </p>
+
+          <a class="boton" href={whatsapp}>
+            Solicitar valoración
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="monograma" aria-hidden="true">
+          <span>MP</span>
+          <div class="linea"></div>
+          <p>MARÍA PRAXEDIS</p>
+        </div>
+      </section>
+
+      <section id="enfoque" class="seccion enfoque">
+        <p class="etiqueta">MARÍA PRAXEDIS</p>
+        <h2>Odontología estética<br />y rehabilitación.</h2>
+        <p>
+          Conoce las opciones de atención del consultorio
+          y conversa sobre tus objetivos en una cita de valoración.
+        </p>
+      </section>
+
+      <section id="contacto" class="seccion contacto">
+        <div>
+          <p class="etiqueta">CONTACTO</p>
+          <h2>Conversemos sobre tu sonrisa.</h2>
+        </div>
+
+        <div class="datos">
+          <p>Calle 17 #14-48, Casa 7</p>
+          <p>Socorro, Santander, Colombia</p>
+          <a class="telefono" href="tel:+573153983469">
+            +57 315 398 3469
+          </a>
+          <a class="boton" href={whatsapp}>Escribir por WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>María Praxedis · Odontología estética y rehabilitación</p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --azul: #080d38;
+    --dorado: #c9942e;
+    --marfil: #faf8f3;
+    --texto: #343844;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    color: var(--texto);
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 5px;
+  }
+
+  .encabezado {
+    max-width: 1280px;
+    margin: auto;
+    padding: 26px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .marca {
+    color: var(--azul);
+    font-family: Georgia, serif;
+    font-size: 25px;
+    text-decoration: none;
+  }
+
+  .marca span {
+    display: block;
+    margin-top: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 14px;
+  }
+
+  nav a {
+    text-decoration: none;
+  }
+
+  .portada {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    min-height: 650px;
+    background: var(--marfil);
+  }
+
+  .contenido {
+    padding: 100px 10%;
+    align-self: center;
+  }
+
+  .etiqueta {
+    color: var(--azul);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  h1,
+  h2 {
+    color: var(--azul);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 1.12;
+  }
+
+  h1 {
+    max-width: 700px;
+    margin: 24px 0;
+    font-size: clamp(44px, 5.3vw, 80px);
+  }
+
+  h2 {
+    margin: 20px 0;
+    font-size: clamp(32px, 3.5vw, 50px);
+  }
+
+  .introduccion {
+    max-width: 430px;
+    margin-bottom: 32px;
+    font-size: 17px;
+  }
+
+  .boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 24px;
+    color: white;
+    background: var(--azul);
+    border: 1px solid var(--azul);
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .boton:hover {
+    background: #1b255b;
+  }
+
+  .monograma {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 24px;
+    background: var(--azul);
+    color: #e2bd72;
+  }
+
+  .monograma > span {
+    font-family: Georgia, serif;
+    font-size: clamp(100px, 13vw, 200px);
+    line-height: 1;
+  }
+
+  .linea {
+    width: 110px;
+    height: 1px;
+    margin-top: 25px;
+    background: var(--dorado);
+  }
+
+  .monograma p {
+    margin-top: 24px;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .seccion {
+    padding: 90px 8%;
+  }
+
+  .enfoque {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .enfoque > p:last-child {
+    max-width: 570px;
+    margin: auto;
+  }
+
+  .contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    background: var(--marfil);
+  }
+
+  .datos p {
+    margin: 4px 0;
+  }
+
+  .telefono {
+    display: block;
+    width: fit-content;
+    margin: 16px 0 24px;
+  }
+
+  footer {
+    padding: 24px 6%;
+    color: white;
+    background: var(--azul);
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (max-width: 760px) {
+    .encabezado {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .portada,
+    .contacto {
+      grid-template-columns: 1fr;
+    }
+
+    .contenido {
+      padding: 65px 8%;
+    }
+
+    .monograma {
+      min-height: 280px;
+    }
+
+    .seccion {
+      padding: 65px 8%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>
